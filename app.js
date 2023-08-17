@@ -7,7 +7,7 @@ const theOldWay = function (course) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('The old way:', theOldWay('Code 301'));
+console.log('The old way:', theOldWay('Code 301'));
 
 // STEP 2
 // We can refactor our first function to use an arrow function.
@@ -17,7 +17,7 @@ const theNewWay = (course) => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('The new way:', theNewWay('Code 301'));
+console.log('The new way:', theNewWay('Code 301'));
 
 // STEP 3
 // When we have one parameter, we can omit the parentheses
@@ -26,7 +26,7 @@ const withoutParens = (course) => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Without parens:', withoutParens('Code 301'));
+console.log('Without parens:', withoutParens('Code 301'));
 
 // STEP 4
 // If the code block contains a single line of code, we can write everything on one line
@@ -35,7 +35,7 @@ const withoutParens = (course) => {
 const oneLiner = (course) => `I cam currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('As a one-liner:', oneLiner('Code 301'));
+console.log('As a one-liner:', oneLiner('Code 301'));
 
 // STEP 5
 // What if we have multiple parameters?
@@ -45,7 +45,7 @@ const add = function (num1, num2) {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Let\'s do some math:', add(4, 5));
+console.log("Let's do some math:", add(4, 5));
 
 // STEP 6
 // When we have multiple parameters, they must be wrapped in parentheses
@@ -53,7 +53,7 @@ const add = function (num1, num2) {
 const addOneLiner = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Add as a one-liner:', addOneLiner(4, 5));
+console.log('Add as a one-liner:', addOneLiner(4, 5));
 
 // STEP 7
 // What if we have multiple lines of code?
@@ -97,14 +97,14 @@ const newObject = (array) => ({
 // Refactor each function into an arrow function.
 // Write your solutions on a single line wherever possible.
 
-let sum = function (a, b, c, d) {
+let sum = (a, b, c, d) => {
   return a + b + c + d;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4));
 
-let objectLit = function () {
+let objectLit = () => {
   return {
     key1: 'value1',
     key2: 'value2',
@@ -113,23 +113,23 @@ let objectLit = function () {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
 
-let sumAndProduct = function (a, b) {
+let sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
 
-let message = function (name) {
+let message = (name) => {
   return `Hello, ${name}!`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
 let Student = function (name, age, hometown) {
   this.name = name;
@@ -151,7 +151,7 @@ Student.prototype.greeting = function () {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -160,7 +160,7 @@ Student.courseName = function () {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+//console.log(Student.courseName());
 
 // STEP 11
 // How do arrow functions affect constructor functions?
@@ -169,17 +169,17 @@ Student.prototype.scope = function () {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+//It is referring to line  154
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//It is not erroring, but it is giving null values
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//Arrow functions can't be used as constructors
